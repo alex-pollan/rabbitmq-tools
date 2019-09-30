@@ -46,7 +46,7 @@ namespace Rabbitmq.Tools
 
                 pbar.Tick("Connecting to RabbitMQ...");
 
-                var factory = new ConnectionFactory() { HostName = settings.HostName };
+                var factory = new ConnectionFactory() { HostName = settings.HostName, UserName=settings.UserName, Password=settings.Password };
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
                 {
