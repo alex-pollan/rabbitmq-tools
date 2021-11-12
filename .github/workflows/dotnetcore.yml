@@ -15,7 +15,7 @@ jobs:
       with:
         dotnet-version: 2.2.108
     - name: Build with dotnet
-      shell: bash 
+      shell: cmd 
       run: dotnet build Rabbitmq.Tools.sln --configuration Release
 
     - name: Codecov
